@@ -1,7 +1,7 @@
 """cloud_sptheme.ext.index_styling - improves css styling for genindex"""
 import logging; log = logging.getLogger(__name__)
 import re
-from jinja2 import Markup as literal, escape
+from markupsafe import Markup  as literal, escape
 from cloud_sptheme import __version__
 
 prefix = r"^(?P<name>.*)\("
