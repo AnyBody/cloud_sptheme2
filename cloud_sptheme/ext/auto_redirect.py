@@ -55,7 +55,10 @@ import os
 # site
 from docutils.nodes import raw
 from sphinx.builders.html import StandaloneHTMLBuilder
-from sphinx.util.pycompat import htmlescape
+try:
+    from sphinx.util.pycompat import htmlescape
+except ImportError:
+    from html import escape as htmlescape
 # pkg
 from cloud_sptheme import __version__, _root_dir, is_cloud_theme
 from cloud_sptheme.utils import add_static_file
