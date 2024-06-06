@@ -1,0 +1,62 @@
+[build-system]
+
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cloud_sptheme2"
+authors=[{name="Eli Colins", email="elic@assurancetechnologies.com"}, {name="Morten Enemark Lund", email="melund@gmail.com"}]
+description = "Fork of the 'Cloud' sphinx theme and it's extensions"
+keywords = ["sphinx2", "extension", "theme"]
+license = {file = "LICENSE"}
+classifiers=[
+    "Development Status :: 5 - Production/Stable",
+    "Framework :: Sphinx :: Extension",
+    "Framework :: Sphinx :: Theme",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Framework :: Pytest",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+    "Topic :: Documentation",
+    "Topic :: Software Development :: Documentation",
+]
+dynamic = ["version"]
+
+requires-python = ">=3.7"
+dependencies = ["sphinx>=1.6"]
+
+[project.urls]
+Homepage = "https://github.com/AnyBody/cloud_sptheme2"
+Code = "https://github.com/AnyBody/cloud_sptheme2"
+
+[project.entry-points."sphinx.html_themes"]
+cloud = "cloud_sptheme"
+greencloud = "cloud_sptheme"
+redcloud = "cloud_sptheme"
+
+[tool.setuptools.dynamic]
+version = {attr = "cloud_sptheme.__version__"}
+
+[tool.setuptools.packages.find]
+exclude = ["docs"] 
+
+[tool.pixi.project]
+channels = ["conda-forge"]
+platforms = ["win-64"]
+
+[tool.pixi.pypi-dependencies]
+cloud_sptheme2 = { path = ".", editable = true }
+
+[tool.pixi.tasks]
+test = "python -m unittest ./cloud_sptheme/tests/test_ext_relbar_toc.py"
+
+[tool.pixi.dependencies]
+sphinx = ">=7.3.7,<7.4"
+
+[tool.pixi.environments]
