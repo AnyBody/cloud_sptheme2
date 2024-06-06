@@ -100,6 +100,7 @@ def setup(app):
     """
     for name, path in _iter_theme_sources():
         app.add_html_theme(name, path)
+    return {"parallel_read_safe": True, "parallel_write_safe": True}
 
 #=============================================================================
 # misc public helpers
