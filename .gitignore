@@ -3,3 +3,7 @@
 /cloud_sptheme.egg-info
 __pycache__
 
+# pixi environments
+.pixi
+*.egg-info
+
