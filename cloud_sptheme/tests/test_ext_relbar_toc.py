@@ -6,15 +6,20 @@ cloud_sptheme.tests -- test relbar_toc extension
 #=============================================================================
 # core
 from __future__ import absolute_import, division, print_function
+
 import logging
+from functools import partial
+
 log = logging.getLogger(__name__)
-import os
 # site
-import mock
-# pkg
-from .utils import TestCase, unittest
+from unittest import mock
+
 # subject
 from cloud_sptheme.ext import relbar_links
+
+# pkg
+from .utils import TestCase
+
 # local
 __all__ = [
 ]
@@ -46,7 +51,7 @@ class UtilsTestCase(TestCase):
 
         # patch sphinx's _() to be noop
         patch = mock.patch.object(relbar_links, "_", side_effect=lambda s: s)
-        self.addCleanup(patch.__exit__)
+        self.addCleanup(partial(patch.__exit__, None, None, None))
         patch.__enter__()
 
     def test_insert_no_links(self):
