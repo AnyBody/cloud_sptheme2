@@ -1,41 +1,12 @@
 .. -*- restructuredtext -*-
+====================================
+Fork of "Cloud" Sphinx Theme 
+====================================
 
-====================
-"Cloud" Sphinx Theme
-====================
+This is a fork of the "Cloud" Sphinx theme by Eli Colins. The orignal theme 
+seems to be no longer maintained, but can be found at
 
-About
-=====
-This is a small package containing a Sphinx theme named "Cloud",
-along with some related Sphinx extensions.
-For more details (and to see the theme in action),
-check out it's documentation at `<https://cloud-sptheme.readthedocs.io>`_.
+https://foss.heptapod.net/doc-utils/cloud_sptheme
 
-Requirements
-------------
-* Sphinx 1.4 or newer
+The fork has been update to work with the newest version of Sphinx and Python.
 
-Installation
-------------
-To install from pypi::
-
-   pip install cloud_sptheme
-
-To install from the source::
-
-   python setup.py install
-
-For more detailed installation & testing instructions, see "docs/install.rst",
-
-Online Resources
-----------------
-* **Homepage & Source:** `<https://foss.heptapod.net/doc-utils/cloud_sptheme>`_
-* **Docs:** `<https://cloud-sptheme.readthedocs.io>`_
-* **Download & PyPI:** `<https://pypi.python.org/pypi/cloud_sptheme>`_
-
-Hosting
--------
-Thanks to the people at `Octobus <https://octobus.net/>`_ and `CleverCloud <https://clever-cloud.com/>`_
-for providing the repository / issue tracker hosting, as well as the development of `Heptapod <https://heptapod.net/>`_!
-
-Thanks to `ReadTheDocs <https://readthedocs.io>`_ for providing documentation hosting!
